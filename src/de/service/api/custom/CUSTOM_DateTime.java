@@ -10,7 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CUSTOM_DateTime  extends Service {
+public class CUSTOM_DateTime  extends Service implements Custom_PreDeclared {
     public CUSTOM_DateTime(int port) throws IOException {
         super(port,"date");
     }

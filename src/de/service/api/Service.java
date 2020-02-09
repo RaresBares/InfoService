@@ -1,8 +1,5 @@
 package de.service.api;
 
-import de.service.utils.Sets;
-
-import java.awt.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -32,7 +29,8 @@ public abstract class Service extends Thread {
                         onConnect(t, new PrintWriter(t.getOutputStream()));
                         t.close();
                }else{
-                   System.err.println("External Connection IP: " + t.getInetAddress().getHostAddress());
+                   System.err.println("External connection IP: " + t.getInetAddress().getHostAddress());
+                   System.err.println("An external IP tried to Connect to the Server! If it was planned, please make shure that you run your CLient on the Server!");
                }
            } catch (IOException e) {
                e.printStackTrace();
