@@ -10,7 +10,7 @@ public class ServiceManager {
 
     private static ServiceManager serviceManager = null;
 
-    public static ServiceManager getServerManager() {
+    public static ServiceManager getServicerManager() {
         if (serviceManager == null) {
             serviceManager = new ServiceManager();
         }
@@ -41,6 +41,8 @@ public class ServiceManager {
     public Service getService(String name){
         return Sets.getServicebyName(name);
     }
+
+
 
 
 }
