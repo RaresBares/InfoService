@@ -8,8 +8,8 @@ public class ServiceCall extends Thread {
     private String Message  ="";
     final Socket socket;
     public ServiceCall(int port) throws IOException {
-        socket = new Socket("localhost", port);
-
+        socket = new Socket("127.0.0.1", port);
+        reload();
     }
 
     public String getMessage() {

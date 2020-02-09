@@ -28,7 +28,7 @@ public abstract class Service extends Thread {
        while (true){
            try {
                Socket t = serverSocket.accept();
-               if(t.getInetAddress().getHostAddress() == "127.0.0.1"){
+               if(t.getInetAddress().getHostAddress().trim().equals("127.0.0.1")){
                         onConnect(t, new PrintWriter(t.getOutputStream()));
                         t.close();
                }else{
